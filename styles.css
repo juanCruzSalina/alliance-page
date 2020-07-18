@@ -1,0 +1,205 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Background */
+body {
+  color: #ffffff;
+  background-color: #686272;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23d1cbdb' fill-opacity='0.4' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+  font-size: 20;
+  font-family: "Raleway", sans-serif;
+}
+
+/* Insignia and menu */
+a {
+  color: #ffffff;
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+.container {
+  width: 90%;
+  margin: auto;
+}
+.nav-main {
+  font-size: 17px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  padding: 20px 0;
+}
+.nav-brand {
+  width: 50px;
+}
+.nav-main ul {
+  display: flex;
+}
+.nav-main ul li {
+  padding: 30px;
+  transition: all 0.4s ease;
+}
+.nav-main ul li a {
+  padding: 2px;
+}
+.nav-main ul li a:hover {
+  border-bottom: 2px solid #ffffff;
+  transform: translate3d(0, 3px, 0);
+}
+.nav-main ul.nav-menu {
+  flex: 1px;
+  margin-left: 20px;
+}
+
+/* Separator */
+hr {
+  color: #ffffff;
+  margin: 10px 0;
+}
+
+/* Showcase */
+.showcase {
+  width: 95%;
+  height: 550px;
+  margin: 30px auto;
+  background-image: url("./img/banner1.jpg");
+  background-position: center 35%;
+  padding-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: flex-end;
+  padding: 20px;
+}
+
+/*Button*/
+.btn {
+  cursor: pointer;
+  display: inline-block;
+  border: 0;
+  font-weight: bold;
+  padding: 10px 20px;
+  background: #669999;
+  color: #ffffff;
+  font-size: 15px;
+  border: 1px solid #ffff;
+  width: 10%;
+  text-align: center;
+  margin-top: 10px;
+}
+.btn:hover {
+  opacity: 0.7;
+}
+
+/* Cards */
+.game-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 25px;
+  margin: 0 20px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+.game-cards img {
+  width: 550px;
+  height: 180px;
+}
+.game-cards h3 {
+  font-size: 20px;
+  margin: 10px 0;
+}
+.game-cards a {
+  padding: 10px 0;
+  color: #f2f2f2;
+  text-transform: uppercase;
+  display: inline-block;
+  font-weight: bold;
+}
+.game-cards a:hover {
+  text-decoration: underline;
+}
+
+/* Discord banner */
+.discord-banner {
+  width: 100%;
+  height: 400px;
+  background: url(./img/discord.png);
+  margin-bottom: 40px;
+  background-position: center 50%;
+}
+.discord-banner .invite {
+  width: 40%;
+  padding: 90px 0 0 30px;
+  color: #000000;
+}
+.discord-banner p,
+.discord-banner h2 {
+  margin: 10px 0 20px 0;
+}
+
+/* Discord Button */
+.btn-d {
+  cursor: pointer;
+  display: inline-block;
+  border: 0;
+  font-weight: bold;
+  padding: 10px 20px;
+  background: #669999;
+  color: #ffffff;
+  font-size: 15px;
+  border: 1px solid #ffff;
+  width: 20%;
+  text-align: center;
+  margin-top: 10px;
+}
+.btn-d:hover {
+  opacity: 0.7;
+}
+
+/* Taled of old Banner */
+.tales {
+  width: 95%;
+  height: 350px;
+  background: url(./img/tales-of-old.jpg);
+  background-position: center 25%;
+  margin: 30px auto;
+}
+.tales .oldcontent {
+  width: 40%;
+  padding: 90px 0 0 30px;
+  color: #f2f2f2;
+}
+
+/*ToO banner button*/
+.oldbtn {
+  cursor: pointer;
+  display: inline-block;
+  border: 0;
+  font-weight: bold;
+  padding: 10px 20px;
+  background: #669999;
+  color: #ffffff;
+  font-size: 15px;
+  border: 1px solid #ffff;
+  width: 30%;
+  text-align: center;
+  margin-top: 10px;
+}
+.oldbtn:hover {
+  opacity: 0.7;
+}
+
+/* FOOTER TEXT */
+.footer {
+  background: #2f3640;
+  color: #818181;
+  font-size: 20px;
+  padding: 50px 0;
+}
+.footer h3 {
+  text-align: center;
+}

@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans&display=swap");
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -7,10 +9,20 @@
 /* Background */
 body {
   color: #ffffff;
-  background-color: #686272;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23d1cbdb' fill-opacity='0.4' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+  background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.15) 0%,
+      rgba(0, 0, 0, 0.15) 100%
+    ),
+    radial-gradient(
+        at top center,
+        rgba(255, 255, 255, 0.4) 0%,
+        rgba(0, 0, 0, 0.4) 120%
+      )
+      #989898;
+  background-blend-mode: multiply, multiply;
   font-size: 20;
-  font-family: "Raleway", sans-serif;
+  font-family: "Work Sans", sans-serif;
 }
 
 /* Insignia and menu */
@@ -54,6 +66,18 @@ ul {
   flex: 1px;
   margin-left: 20px;
 }
+.nav-main ul.nav-menu-right a {
+  margin-right: 20px;
+  font-size: 1.25rem;
+}
+.nav-main .menu-btn {
+  font-size: 1.5rem;
+  position: absolute;
+  cursor: pointer;
+  top: 16px;
+  right: 50px;
+  display: none;
+}
 
 /* Separator */
 hr {
@@ -74,6 +98,7 @@ hr {
   align-items: left;
   justify-content: flex-end;
   padding: 20px;
+  border-radius: 10px;
 }
 
 /*Button*/
@@ -90,6 +115,7 @@ hr {
   width: 10%;
   text-align: center;
   margin-top: 10px;
+  border-radius: 10px;
 }
 .btn:hover {
   opacity: 0.7;
@@ -103,10 +129,12 @@ hr {
   margin: 0 20px;
   overflow: hidden;
   margin-bottom: 20px;
+  border-radius: 10px;
 }
 .game-cards img {
-  width: 550px;
+  width: 100%;
   height: 180px;
+  border-radius: 10px;
 }
 .game-cards h3 {
   font-size: 20px;
@@ -130,15 +158,15 @@ hr {
   background: url(./img/discord.png);
   margin-bottom: 40px;
   background-position: center 50%;
+  border-radius: 10px;
 }
 .discord-banner .invite {
   width: 40%;
   padding: 90px 0 0 30px;
   color: #000000;
 }
-.discord-banner p,
-.discord-banner h2 {
-  margin: 10px 0 20px 0;
+.discord-banner .invite h2 {
+  margin: 20px 0 20px 0;
 }
 
 /* Discord Button */
@@ -151,10 +179,10 @@ hr {
   background: #669999;
   color: #ffffff;
   font-size: 15px;
-  border: 1px solid #ffff;
+  border: 1px solid #000000;
   width: 20%;
   text-align: center;
-  margin-top: 10px;
+  border-radius: 10px;
 }
 .btn-d:hover {
   opacity: 0.7;
@@ -167,10 +195,11 @@ hr {
   background: url(./img/tales-of-old.jpg);
   background-position: center 25%;
   margin: 30px auto;
+  border-radius: 10px;
 }
 .tales .oldcontent {
-  width: 40%;
-  padding: 90px 0 0 30px;
+  width: 100%;
+  padding: 50px 0 0 30px;
   color: #f2f2f2;
 }
 
@@ -188,6 +217,7 @@ hr {
   width: 30%;
   text-align: center;
   margin-top: 10px;
+  border-radius: 10px;
 }
 .oldbtn:hover {
   opacity: 0.7;
@@ -202,4 +232,96 @@ hr {
 }
 .footer h3 {
   text-align: center;
+}
+
+@media (max-width: 800px) {
+  .nav-main ul.nav-menu {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #8ec5fc;
+    background-image: linear-gradient(62deg, #8ec5fc 0%, #e0c3fc 100%);
+    height: 100%;
+    padding: 30px;
+    opacity: 0.9;
+    transform: translateX(-400px);
+    transition: transform 0.5s ease-in-out;
+  }
+  .nav-main ul.nav-menu.show {
+    transform: translateX(-20px);
+  }
+  .nav-main ul.nav-menu li {
+    padding: 20px;
+    border-bottom: black solid 1px;
+  }
+  .menu-btn {
+    position: absolute;
+    cursor: pointer;
+    font-size: 1.5rem;
+    top: 17px;
+    right: 35px;
+  }
+  .container .nav-main .nav-menu a {
+    color: black;
+  }
+  .showcase {
+    width: 100%;
+    background-position: 40% 45%;
+    height: 250px;
+    align-items: center;
+  }
+  .showcase p,
+  .showcase h2 {
+    text-align: center;
+  }
+  .btn {
+    width: 50%;
+  }
+  .game-cards {
+    grid-template-columns: repeat(1, 1fr);
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    row-gap: 30px;
+    margin-bottom: 30px;
+  }
+  .game-cards img {
+    width: 100%;
+    column-gap: 0px;
+  }
+  .discord-banner {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 200px;
+    display: flex;
+    align-items: center;
+  }
+  .discord-banner .invite {
+    width: 100%;
+    padding: 0;
+    text-align: center;
+  }
+  .discord-banner.invite h2 {
+    margin: 0;
+  }
+
+  .btn-d {
+    width: 50%;
+  }
+  .tales {
+    width: 100%;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    padding: 0px;
+    text-align: center;
+  }
+  .tales .oldcontent {
+    padding: 0px;
+  }
+  .oldbtn {
+    width: 50%;
+  }
 }
